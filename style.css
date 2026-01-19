@@ -1,0 +1,435 @@
+*{
+            margin-left: 20;
+            padding:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+          
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+            background-image:url('https://i0.wp.com/textures.world/wp-content/uploads/2018/10/Dark-Wood-Seamless-Background-Texture-6-copy.jpg?resize=1140%2C759&ssl=1');
+        
+            background-size: cover;
+            background-position:center;
+            box-sizing:border-box;
+            margin-top:0px;
+        
+        }
+        .bodyy {
+        background-image:url('');
+        background-size: cover;
+        background-position: center;
+        color: rgb(242, 243, 242); 
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 10px;
+        width:100vw;
+        object-fit: cover;
+        margin:0;
+        padding: 40px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    
+        }
+
+
+       .bodyy:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+
+    
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position:fixed;
+            top:0; left:0; right:0;
+            height:var(--header-height);
+            width:100vw;
+            object-fit: cover;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbz8VkmcD8Ff-swGEDIu1mUQrPoNAotqR67A&s');
+           
+            padding:10px 20px;
+            z-index:1000;
+            flex:wrap;
+            color:#000;
+            
+            
+        }
+
+        .menu a{
+            text-decoration: none;
+            margin-left: 20px;
+            color: rgb(1, 36, 36);
+            font-size: 16px;
+        
+
+        }
+        .hero-text a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        
+        
+        
+
+        .button{
+            padding: 8px 15px;
+            border: 0px solid #000;
+            border-radius: 10px;
+            background-color: #f9bd08;
+            text-decoration: none;
+            color:#edeceb;
+            font-weight: bold;
+        }
+        
+        
+
+        .button:hover{
+            background: #dad604;
+            color: #f5f4f4;
+        }
+        .logo{
+            display:flex;
+            gap:10px;
+            color:#f5f2f0;
+            align-items: center;
+           
+        }
+        .circle{
+            height:400px;
+            width:400px;
+            border-radius: 50%;
+            object-fit: cover; 
+        
+
+}
+        .features {
+            display: flex;
+              flex-direction: row;
+               gap: 20px;
+                 padding: 20px;
+                 flex-wrap:wrap;
+                 margin: 0%;
+                 width:100vw;
+                 object-fit: cover;
+            
+
+}
+        .hero-text{
+            display:flex;
+            flex-direction: row;
+            gap:110px;
+             flex-wrap:wrap;
+             margin-top: 50px;
+    
+
+        }
+       
+        
+         .feature{
+            flex:1;
+            min-width:250px;
+            border:0px solid black;
+            gap:10px;
+            padding:10px;
+            background-color:rgb(244, 243, 243);
+            border-radius: 5px;
+            text-align: center;
+            margin:0%;
+         }
+         .feature:hover{
+            background: #f9bd08;
+            color:#f8f8f8;
+         }
+         .feature i{
+            color:#f9bd08;
+            font-size:30px;
+         }
+         .about{
+            display:flex;
+            flex-direction:row;
+            gap:10px;
+            margin: 0%;
+            width:100vw;
+            object-fit: cover;
+        
+
+         }
+         .About{
+        
+            padding:5px;
+            color:#f9bd08;
+            font-weight:bolder;
+            text-align: center;
+            
+
+         }
+         
+         .about-text i{
+            color:#f9bd08;
+            
+       }
+       .about-text{
+
+        border:0px solid rgb(243, 242, 242);
+        padding:10px;
+        border-width: 10px;
+        color:#f8f8f8;
+    
+       }
+
+      
+
+.menu-grid {
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+  gap: 25px 40px;
+  padding: 30px;
+  width:100vw;
+  object-fit: cover;
+  ;
+}
+
+.menu-ittem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+  background: #f7f5f5;
+  border-radius: 10px;
+  padding:15px 20px;
+  background-color: #dad9c5;
+ 
+}
+
+
+
+
+.menu-ittem img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.menu-info {
+    flex:1;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.menu-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0c1b33;
+  margin-bottom: 5px;
+}
+
+.menu-info p {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+  border-top: 1px solid #ddd;
+  padding-top: 5px;
+}
+
+
+.price {
+  font-weight: bold;
+  color: #ff8800;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.food-menu{
+    text-align: center;
+    color:#f7f5f5
+}
+.food-menu p{
+     color:#f9bd08;
+     font-weight:bold;
+}
+.reserve{
+    text-align: center;
+    color:#f7f5f5;
+}
+.reserve i{
+    color: #f9bd08;
+    font-weight: bold;
+}
+.reservation img{
+    width:700px;
+    height:450px;
+    border:1px solid black;
+    border-radius: 5px;
+    margin:0;
+
+}
+.reservation form{
+    border:1px solid black;
+    padding:10px;
+    border-radius: 5px;
+    background-color: #0c1b33;
+    color: #f7f5f5;
+    width:700px;
+    height:450px;
+     margin:0;
+      
+}
+.reservation input{
+    width:500px;
+    height:40px;
+    gap: 100px;
+}
+.reservation button{
+    width:500px;
+    height:40px;
+}
+.opt{
+    width:500px;
+    height:40px;
+}
+.reservation{
+    display:flex;
+    margin: 0%;
+    gap:10px;
+    width:100vw;
+    object-fit: cover;
+    
+}
+.order{
+    display:flex;
+    margin: 0%;
+    gap:10px;
+    width:100vw;
+    object-fit: cover;
+}
+.order-form{
+    border:1px solid black;
+    padding:10px;
+    border-radius: 5px;
+    background-color: #0c1b33;
+    color: #f7f5f5;
+    width:700px;
+    height:450px;
+     margin:0;
+
+}
+.order img{
+ width:700px;
+    height:450px;
+    border:1px solid black;
+    border-radius: 5px;
+    margin:0;
+
+}
+.order-form input{
+    width:500px;
+    height:40px;
+    gap: 100px;
+
+}
+.placeorder i{
+  color: #f9bd08;
+    font-weight: bold;  
+}
+.placeorder{
+    text-align: center;
+    color:#f7f5f5;
+}
+.order button{
+    width:500px;
+    height:40px;
+
+}
+
+.service{
+    text-align:center;
+    font-weight: bold;
+    color: #f9bd08;
+}
+.member i{
+    color:#f9bd08;
+
+}
+.member{
+    text-align: center;
+    color:#f7f5f5;
+}
+.team-members{
+    display:flex;
+    gap:20px;
+    border:1px solid rgb(218, 214, 214);
+    padding:10px;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction:row;
+    border-radius: 10px;
+    background-color: #e1dddd;
+    margin: 0%;
+    width:100vw;
+    object-fit: cover;
+}
+.team-members img{
+          height:300px;
+            width:300px;
+            border-radius: 50%;
+                object-fit: cover;
+             }
+.contuct a{
+    text-decoration: none;
+    color: #fcfbfb;
+     }
+     .contuct{
+        display:flex;
+            flex-direction: row;
+            gap:150px;
+            border:1px solid black;
+            padding:50px;
+            color:#f8f8f8;
+            background-color: #170127;
+            flex-wrap: wrap;
+            width:100vw;
+            object-fit: cover;
+
+     }
+     .contuct h3{
+        color:#f9bd08
+     }
+     .footer{
+        background-color: #170127;
+        padding:50px;
+        color: #f8f8f8;
+        text-align: center;
+     }
+     
+     @media(max-width:768px){
+    header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .menu{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+    }
+    .hero-text{
+        flex-direction:column;
+        gap:20px;
+    }
+    .features, .about, .team-members, .contuct{
+        flex-direction:column;
+        gap:20px;
+    }
+    .reservation{
+        flex-direction:column;
+        gap:20px;
+    }
+}
+      
+
