@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran</title>
+    <style>
+       *{
+            margin-left: 20;
+            padding:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+          
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+            background-image:url('https://i0.wp.com/textures.world/wp-content/uploads/2018/10/Dark-Wood-Seamless-Background-Texture-6-copy.jpg?resize=1140%2C759&ssl=1');
+        
+            background-size: cover;
+            background-position:center;
+            box-sizing:border-box;
+            margin-top:0px;
+        
+        }
+        .bodyy {
+        background-image:url('');
+        background-size: cover;
+        background-position: center;
+        color: rgb(242, 243, 242); 
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 10px;
+        width:100vw;
+        object-fit: cover;
+        margin:0;
+        padding: 40px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    
+        }
+
+
+       .bodyy:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+
+    
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position:fixed;
+            top:0; left:0; right:0;
+            height:var(--header-height);
+            width:100vw;
+            object-fit: cover;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbz8VkmcD8Ff-swGEDIu1mUQrPoNAotqR67A&s');
+           
+            padding:10px 20px;
+            z-index:1000;
+            flex:wrap;
+            color:#000;
+            
+            
+        }
+
+        .menu a{
+            text-decoration: none;
+            margin-left: 20px;
+            color: rgb(1, 36, 36);
+            font-size: 16px;
+        
+
+        }
+        .hero-text a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        
+        
+        
+
+        .button{
+            padding: 8px 15px;
+            border: 0px solid #000;
+            border-radius: 10px;
+            background-color: #f9bd08;
+            text-decoration: none;
+            color:#edeceb;
+            font-weight: bold;
+        }
+        
+        
+
+        .button:hover{
+            background: #dad604;
+            color: #f5f4f4;
+        }
+        .logo{
+            display:flex;
+            gap:10px;
+            color:#f5f2f0;
+            align-items: center;
+           
+        }
+        .circle{
+            height:400px;
+            width:400px;
+            border-radius: 50%;
+            object-fit: cover; 
+        
+
+}
+        .features {
+            display: flex;
+              flex-direction: row;
+               gap: 20px;
+                 padding: 20px;
+                 flex-wrap:wrap;
+                 margin: 0%;
+                 width:100vw;
+                 object-fit: cover;
+            
+
+}
+        .hero-text{
+            display:flex;
+            flex-direction: row;
+            gap:110px;
+             flex-wrap:wrap;
+             margin-top: 50px;
+    
+
+        }
+       
+        
+         .feature{
+            flex:1;
+            min-width:250px;
+            border:0px solid black;
+            gap:10px;
+            padding:10px;
+            background-color:rgb(244, 243, 243);
+            border-radius: 5px;
+            text-align: center;
+            margin:0%;
+         }
+         .feature:hover{
+            background: #f9bd08;
+            color:#f8f8f8;
+         }
+         .feature i{
+            color:#f9bd08;
+            font-size:30px;
+         }
+         .about{
+            display:flex;
+            flex-direction:row;
+            gap:10px;
+            margin: 0%;
+            width:100vw;
+            object-fit: cover;
+        
+
+         }
+         .About{
+        
+            padding:5px;
+            color:#f9bd08;
+            font-weight:bolder;
+            text-align: center;
+            
+
+         }
+         
+         .about-text i{
+            color:#f9bd08;
+            
+       }
+       .about-text{
+
+        border:0px solid rgb(243, 242, 242);
+        padding:10px;
+        border-width: 10px;
+        color:#f8f8f8;
+    
+       }
+
+      
+
+.menu-grid {
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+  gap: 25px 40px;
+  padding: 30px;
+  width:100vw;
+  object-fit: cover;
+  ;
+}
+
+.menu-ittem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+  background: #f7f5f5;
+  border-radius: 10px;
+  padding:15px 20px;
+  background-color: #dad9c5;
+ 
+}
+
+
+
+
+.menu-ittem img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.menu-info {
+    flex:1;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.menu-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0c1b33;
+  margin-bottom: 5px;
+}
+
+.menu-info p {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+  border-top: 1px solid #ddd;
+  padding-top: 5px;
+}
+
+
+.price {
+  font-weight: bold;
+  color: #ff8800;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.food-menu{
+    text-align: center;
+    color:#f7f5f5
+}
+.food-menu p{
+     color:#f9bd08;
+     font-weight:bold;
+}
+.reserve{
+    text-align: center;
+    color:#f7f5f5;
+}
+.reserve i{
+    color: #f9bd08;
+    font-weight: bold;
+}
+.reservation img{
+    width:700px;
+    height:450px;
+    border:1px solid black;
+    border-radius: 5px;
+    margin:0;
+
+}
+.reservation form{
+    border:1px solid black;
+    padding:10px;
+    border-radius: 5px;
+    background-color: #0c1b33;
+    color: #f7f5f5;
+    width:700px;
+    height:450px;
+     margin:0;
+      
+}
+.reservation input{
+    width:500px;
+    height:40px;
+    gap: 100px;
+}
+.reservation button{
+    width:500px;
+    height:40px;
+}
+.opt{
+    width:500px;
+    height:40px;
+}
+.reservation{
+    display:flex;
+    margin: 0%;
+    gap:10px;
+    width:100vw;
+    object-fit: cover;
+    
+}
+.order{
+    display:flex;
+    margin: 0%;
+    gap:10px;
+    width:100vw;
+    object-fit: cover;
+}
+.order-form{
+    border:1px solid black;
+    padding:10px;
+    border-radius: 5px;
+    background-color: #0c1b33;
+    color: #f7f5f5;
+    width:700px;
+    height:450px;
+     margin:0;
+
+}
+.order img{
+ width:700px;
+    height:450px;
+    border:1px solid black;
+    border-radius: 5px;
+    margin:0;
+
+}
+.order-form input{
+    width:500px;
+    height:40px;
+    gap: 100px;
+
+}
+.placeorder i{
+  color: #f9bd08;
+    font-weight: bold;  
+}
+.placeorder{
+    text-align: center;
+    color:#f7f5f5;
+}
+.order button{
+    width:500px;
+    height:40px;
+
+}
+
+.service{
+    text-align:center;
+    font-weight: bold;
+    color: #f9bd08;
+}
+.member i{
+    color:#f9bd08;
+
+}
+.member{
+    text-align: center;
+    color:#f7f5f5;
+}
+.team-members{
+    display:flex;
+    gap:20px;
+    border:1px solid rgb(218, 214, 214);
+    padding:10px;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction:row;
+    border-radius: 10px;
+    background-color: #e1dddd;
+    margin: 0%;
+    width:100vw;
+    object-fit: cover;
+}
+.team-members img{
+          height:300px;
+            width:300px;
+            border-radius: 50%;
+                object-fit: cover;
+             }
+.contuct a{
+    text-decoration: none;
+    color: #fcfbfb;
+     }
+     .contuct{
+        display:flex;
+            flex-direction: row;
+            gap:150px;
+            border:1px solid black;
+            padding:50px;
+            color:#f8f8f8;
+            background-color: #170127;
+            flex-wrap: wrap;
+            width:100vw;
+            object-fit: cover;
+
+     }
+     .contuct h3{
+        color:#f9bd08
+     }
+     .footer{
+        background-color: #170127;
+        padding:50px;
+        color: #f8f8f8;
+        text-align: center;
+     }
+     
+     @media(max-width:768px){
+    header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .menu{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+    }
+    .hero-text{
+        flex-direction:column;
+        gap:20px;
+    }
+    .features, .about, .team-members, .contuct{
+        flex-direction:column;
+        gap:20px;
+    }
+    .reservation{
+        flex-direction:column;
+        gap:20px;
+    }
+}
+      
+
+
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="resturent">
+    <div id="home">
+    <section class="bodyy">
+    
+        <header class="area">
+            <div class="logo">
+                <img src="https://img.freepik.com/premium-vector/logo-steak-restaurant-with-fork-knife_1240970-33805.jpg?semt=ais_hybrid&w=740&q=80" alt="Logo" width="70">
+                <h1>Restoran<h1>
+                <h3> Online & Offline Resturent</h3>
+            </div>
+            <nav class="menu">
+                <a href="#home" class="button">Home</a>
+                <a href="#About" class="button">About</a>
+                <a href="#service" class="button">Services</a>
+                <a href="#Menu" class="button">Menu</a>
+                <a href="#contuct" class="button">Contact</a>
+                <a href="#reserve" class="button">Reserve Table</a>
+            </nav>
+        </header>
+    
+        <br><br><br>
+        <section class="hero-text">
+        <div class="hero-text1">
+        <h1 class="para">Enjoy Our<br>
+          Delicious Meal</h1><br><br>
+      <p class="class">
+      Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.<br> Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet<br> lorem sit clita duo justo magna dolore erat amet
+      </p><br><br>
+      <a href="#reserve" class="button">BOOK A TABLE</a>
+
+        
+        </div><br>
+        <div class="hero-img">
+            
+            <img src="https://www.deputy.com/uploads/2018/10/The-Most-Popular-Menu-Items-That-You-should-Consider-Adding-to-Your-Restaurant_Content-image1-min-1024x569.png"class="circle" alt="img"width=400>
+
+        </div>
+        </section>
+        
+        </section><br><br>
+        <div class="service">
+            <h2>-----Our Services------</h2>
+        </div>
+
+      <section class="features"id="service">
+        <div class="feature">
+            <p><i class="fa-regular fa-user"></i></p>
+            <h4>Master Chefs</h4>
+            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita<br> amet diam</p>
+        
+        </div>
+        <div class="feature">
+            <p><i class="fa-solid fa-box"></i></p>
+            <h4>Online Order</h4>
+            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita<br> amet diam</p>
+        </div>
+        <div class="feature">
+            <p><i class="fa-brands fa-servicestack"></i></p>
+            <h4>24/7 Service</h4>
+            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita<br> amet diam</p>
+        </div>
+        <div class="feature">
+            <p><i class="fa-solid fa-utensils"></i></p>
+            <h4>Quality Food</h4>
+            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita<br> amet diam</p>
+            
+        </div>
+      </section>
+      <section class="About"id="About">
+        <h1>
+            -----About Us-----
+        </h1>
+      </section>
+      <section class="about">
+        
+        <div class="about-pic">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3A396fokcR7Sh__1JeA9DELoijf1rYUAQnQ&s" alt="pic" width="220">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSULAvlodbcMEysUPzZlPOT9mFFbnTJ4dnYdA&s" alt="pic"width="220">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxRZ-94lE8Wyli93uRAd5Vp5YE4yQveGtOQ&s" alt="pic"width="220">
+            <img src="https://img.freepik.com/free-photo/happy-waiter-serving-food-group-cheerful-friends-pub_637285-12525.jpg?semt=ais_hybrid&w=740&q=80" alt="pic"width=220>
+        </div>
+        <div class="about-text">
+       <p><i>about us------</i></p>
+
+       <h2>Welcome to <i class="fa-solid fa-utensils"></i>  Restoran</h2>
+      <p>
+        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit.
+
+        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.<br> Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+      </p>
+      <a href="https://share.google/kINa6q8MBZKnFR7PO" class="button"style="color:white;">Read More</a>
+
+        </div>
+
+      </section>
+      <section class="food-menu" id="Menu">
+  <p><i>--Food Menu--</i></p>
+  <h2>Most Popular Items</h2>
+  </section>
+
+  <div class="menu-grid">
+    <div class="menu-ittem">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Iou-s6SzckiFZgneU3jwPTh5-f8ZeUMxtA&s" alt="">
+      <div class="menu-info">
+        <h3>Chicken Burger</h3>
+        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+        <a href="#btt" class="button">Order now</a>
+        
+      </div>
+      <div class="price">Tk 120</div>
+
+      
+    </div>
+
+    <div class="menu-ittem">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcZTBmQGFmi2aFZhsO3lL5YBQ_If5NOQFwGw&s" alt="">
+      <div class="menu-info">
+        <h3>Chicken Chao Ming</h3>
+        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+         <a href="#btt" class="button">Order now</a>
+           
+
+      </div>
+      <div class="price">Tk 220</div>
+    </div>
+
+    <div class="menu-ittem">
+      <img src="https://www.foodandwine.com/thmb/iJw7N_NfcPpd-EB8rpYbzrkSFIM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tomato-mozzarella-pizza-FT-RECIPE0725-e7244e979c504188a049623668c15b2e.jpg" alt="">
+      <div class="menu-info">
+        <h3>Chicken Pizza</h3>
+        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+         <a href="#btt" class="button">Order now</a>
+              
+
+
+      </div>
+      <div class="price">Tk 320</div>
+    </div>
+    <div class="menu-ittem">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAdLYHKNqZg5wFoHIukuQr1yTuFijjq54fsw&s" alt="">
+        <div class="menu-info">
+            <h3>Chicken Soup</h3>
+            <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+             <a href="#btt" class="button">Order now</a>
+                   
+
+
+        </div>
+        <div class="price">Tk 290</div>
+    </div>
+    <div class="menu-ittem">
+        <img src="https://c.ndtvimg.com/2021-07/vckh316o_grilled-chicken-sandwich_625x300_28_July_21.jpg" alt="">
+    
+    <div class="menu-info">
+        <h3>Chicken Sandwice</h3>
+        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+         <a href="#btt" class="button">Order now</a>
+          
+
+
+    </div>
+    <div class="price">
+        Tk 160
+    </div>
+    </div>
+    <div class="menu-ittem">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8LwumF4lCEmajcOOE7VtT23bJY7qgd4LQgg&s" alt="">
+    
+    <div class="menu-info">
+        <h3>Coffee</h3>
+        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+         <a href="#btt" class="button">Order now</a>
+              
+
+
+    </div>
+    <div class="price">
+        Tk 130
+    </div>
+</div>
+<div class="menu-ittem">
+      <img src="https://domf5oio6qrcr.cloudfront.net/medialibrary/8468/Tea.jpg" alt="">
+      <div class="menu-info">
+        <h3>Special Tea</h3>
+        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+         <a href="#btt" class="button">Order now</a>
+               
+
+      </div>
+      <div class="price">Tk 80</div>
+    </div>
+    <div class="menu-ittem">
+      <img src="https://sudachirecipes.com/wp-content/uploads/2025/03/royal-milk-tea-thumb.png" alt="">
+      <div class="menu-info">
+        <h3>Milk Tea</h3>
+        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+         <a href="#btt" class="button">Order now</a>
+          
+
+      </div>
+      <div class="price">Tk 110</div>
+    </div>
+    <div class="menu-ittem">
+      <img src="https://www.shutterstock.com/image-photo/chinese-chicken-fried-rice-combo-600nw-1874224915.jpg" alt="">
+      <div class="menu-info">
+        <h3>Fried Rice + Chicken + Salad</h3>
+        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+         <a href="#btt" class="button">Order now</a>
+         
+
+      </div>
+      <div class="price">Tk 220</div>
+    </div>
+    <div class="menu-ittem">
+      <img src="https://static.toiimg.com/photo/53094926.cms" alt="">
+      <div class="menu-info">
+        <h3>Chili Chicken</h3>
+        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+         <a href="#btt" class="button">Order now</a>
+                
+
+      </div>
+      <div class="price">Tk 160</div>
+    </div>
+    <div class="menu-ittem">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-T9Kl11dIrU0gNjjRUmEXLyHk1VBmmUBkvw&s" alt="">
+      <div class="menu-info">
+        <h3>Butter Nun</h3>
+        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+
+              <a href="#btt" class="button">Order now</a>
+
+      </div>
+      <div class="price">Tk 120</div>
+    </div>
+<div class="menu-ittem">
+      <img src="https://i.ytimg.com/vi/pt2Q5Wbz1dU/maxresdefault.jpg" alt="">
+      <div class="menu-info">
+        <h3>Chicken Tikka</h3>
+        <p>Ipsum ipsum clita erat amet dolor justo diam</p>
+         <a href="#btt" class="button">Order now</a>
+               
+
+      </div>
+      <div class="price">Tk 230</div>
+    </div>
+
+
+
+    </div>
+    <div id="btt">
+    <div class="placeorder">
+         <p>
+            <i>--------Order-------</i>
+        </p>
+         <h2>Place order</h2>
+    </div>
+    <div class="order" id="btt">
+    
+       
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWMZdJAMhzWDLin6QeQqNkog8CLVUapwbvVg&s" alt="">
+       
+        <form action="" class="order-form">
+             <h2>Place Order🌟🌟🌟</h2>
+           
+     <select required class="opt">
+        <option selected disabled>Choose Items</option>
+        <option>Chicken Burger</option>
+        <option>Chicken Chaoming</option>
+        <option>Chicken Pizza</option>
+        <option>Chicken Soup</option>
+        <option>Chicken Sandwice</option>
+        <Option>Coffe</Option>
+        <Option>Special Tea</Option>
+        <Option>Milk Tea</Option>
+        <Option>Fried Rice + Chicken + Salad</Option>
+        <Option>Chilli Chicken</Option>
+        <Option>Butter Nun</Option>
+        <Option>Chicken Tikka</Option>
+      </select><br><br>
+    <input type="text"value="Enter your name"placeholder="Your Name"><br><br>
+    <input type="text"value="Email"placeholder="Email"><br><br>
+    
+   
+     <textarea placeholder="Special Request"cols="54.5"rows="2"></textarea><br><br>
+
+     
+
+    <select required class="opt">
+        <option selected disabled>Quantity</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select><br><br>
+      <button type="submit" class="button">Order</button>
+   
+
+</form>
+
+
+    </div>
+    </div>
+    <div class="reserve" id="reserve">
+        <p>
+            <i>--------Table Reserve-------</i>
+        </p>
+        <h2>
+            Book A Table Online
+        </h2>
+</div>
+<div class="reservation">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzMh0EO4SNVFbZvMrdvcOw1kJlpqo8FHSEMA&s" alt="">
+<form action="" class="reservation-form">
+    <h2>Reservation</h2>
+    <input type="text"value="Name"placeholder="Your Name"><br><br>
+    <input type="text"value="Email"placeholder="Email"><br><br>
+    <input type="datetime-local" placeholder="Date & Time" required><br><br>
+   
+     <textarea placeholder="Special Request"cols="54.5"rows="2"></textarea><br><br>
+
+    
+    <select required class="opt">
+        <option selected disabled>No Of People</option>
+        <option>People 1</option>
+        <option>People 2</option>
+        <option>People 3</option>
+        <option>People 4</option>
+        <option>People 5+</option>
+      </select><br><br>
+      <button type="submit" class="button">BOOK NOW</button>
+   
+
+</form>
+</div>
+<br>
+<div class="member">
+    <p><i>-----Team members----</i></p>
+    <h2>Our Master Chefs</h2>
+</div>
+<div class="team-members">
+    <div class="mem-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuEtU7QOeVTKwIOu2SWjnw5ZYAi8mAqn6hoA&s"width=200; alt="">
+        <p>Arpan Singh</p>
+        <h3>India</h3>
+    </div>
+    <div class="mem-img">
+        <img src="https://img.freepik.com/free-photo/medium-shot-professional-chef-posing_23-2151232159.jpg?semt=ais_hybrid&w=740&q=80"width=285; alt="">
+        <p>Karion Roy</p>
+        <h3>China</h3>
+    </div>
+    <div class="mem-img">
+        <img src="https://www.deliciousmagazine.co.uk/wp-content/uploads/2021/03/Santosh-Shah-Masterchef-600.jpg"width=170; alt="">
+        <p>Shantos Shah</p>
+        <h3>Kanada</h3>
+    </div>
+    <div class="mem-img">
+        <img src="https://static.cordonbleu.edu/Files/MediaFile/84569.jpg"width=300; alt="">
+        <p>Arayna Kami</p>
+        <h3>England</h3>
+    </div>
+</div><br>
+<div class="contuct"id="contuct">
+    <div class="contuct1">
+        <h3>
+            Company------
+        </h3>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#Menu">Menu</a></li>
+            <li><a href="#Contuct">Contuct</a></li>
+            <li><a href="#reserve">Reserve</a></li>
+        </ul>
+    </div>
+    <div class="contuct2">
+        <h3>
+            Contuct------
+        </h3>
+        <p><i class="fa-solid fa-location-dot"></i>123 Street, New York, USA</p>
+        <p> <i class="fa-solid fa-phone-volume"></i>+012 345 67890</p>
+        <p><i class="fa-solid fa-envelope"></i>info@example.com</p>
+        
+
+    </div>
+    <div class="contuct3">
+        <h3>
+            Opening-------
+        </h3>
+        <p>
+           Monday - Saturday<br>
+          09AM - 09PM<br>
+
+          Sunday<br>
+         10AM - 08PM
+        </p>
+
+    </div>
+    <div class="contuct4">
+        <h3> Give Your Feedback---  </h3>
+        <input type="radio"name="Feedback"value="Exellent">
+        <label for="Feedback">Exellent</label><br>
+         <input type="radio"name="Feedback"value="Good">
+        <label for="Feedback">Good</label><br>
+         <input type="radio"name="Feedback"value="Average">
+        <label for="Feedback">Average</label><br>
+         <input type="radio"name="Feedback"value="Bad">
+        <label for="Feedback">Bad</label>
+    </div></div>
+    <div class="footer">
+    <footer>
+        <p>© Your Site Name, All Right Reserved. Designed By HTML Codex</p>
+        <p>Distributed By Tanvir Kabir<p>
+
+    </footer>
+</div>
+</div>
+</div>
+
+</body>
+</html>
